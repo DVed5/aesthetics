@@ -1,5 +1,15 @@
 $(function () {
 
+	// Обработка кнопки формы
+	$('.header-form__btn').on('click', function () {
+		$('.header-form__inner').toggleClass('active');
+	});
+
+	// Обработка кнопки мобильного меню
+	$('.header__menu-btn').on('click', function () {
+		$('.header__menu-list').toggleClass('active');
+	});
+
 	let submenuTimeout;
 
 	function toggleSubmenuBehavior() {
@@ -7,10 +17,10 @@ $(function () {
 			// Включаем hover-логику для экранов >= 1140px
 			$('.header__menu-item').off('click').hover(
 				function () {
-					$(this).find('.header__submenu').stop(true, true).fadeIn(500);
+					$(this).find('.header__submenu').stop(true, true).fadeIn(300);
 				},
 				function () {
-					$(this).find('.header__submenu').stop(true, true).fadeOut(500);
+					$(this).find('.header__submenu').stop(true, true).fadeOut(300);
 				}
 			);
 		} else {
@@ -23,23 +33,25 @@ $(function () {
 				clearTimeout(submenuTimeout);
 
 				if (submenu.hasClass('active')) {
-					// Скрываем подменю без задержки
-					submenu.removeClass('active').fadeOut(300);
+					submenu.removeClass('active').fadeOut(150);
 				} else {
-					// Закрываем другие подменю
-					$('.header__submenu').removeClass('active').fadeOut(300);
-
-					// Добавляем задержку для отображения текущего подменю
+					$('.header__submenu').removeClass('active').fadeOut(150);
 					submenuTimeout = setTimeout(() => {
-						submenu.addClass('active').fadeIn(300);
-					}, 300); // Задержка 300ms
+						submenu.addClass('active').fadeIn(150);
+					}, 150);
 				}
 			});
 
-			// Закрытие подменю при клике вне меню
+			// Закрытие подменю и меню при клике вне меню
 			$(document).on('click', function () {
-				clearTimeout(submenuTimeout); // Очищаем задержку
-				$('.header__submenu').removeClass('active').fadeOut(300);
+				clearTimeout(submenuTimeout);
+				$('.header__submenu').removeClass('active').fadeOut(150);
+				$('.header__menu-list').removeClass('active');
+			});
+
+			// Предотвращаем закрытие при клике внутри меню
+			$('.header__menu,.header__menu-btn').on('click', function (e) {
+				e.stopPropagation();
 			});
 		}
 	}
@@ -49,19 +61,11 @@ $(function () {
 
 	// Перезапуск логики при изменении размеров окна
 	$(window).on('resize', toggleSubmenuBehavior);
-
-	// Обработка кнопки формы
-	$('.header-form__btn').on('click', function () {
-		$('.header-form__inner').toggleClass('active');
-	});
-
-	// Обработка кнопки мобильного меню
-	$('.header__menu-btn').on('click', function () {
-		$('.header__menu-list').toggleClass('active');
-	});
 });
 
 
+
+// Слайдер
 const swiper = new Swiper('.swiper', {
 
 	autoplay: {
