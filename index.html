@@ -157,13 +157,12 @@
 		</div>
 	</header>
 	<main>
-		<section class="top">
-			<picture>
-				<source srcset="images/top-bg.avif" type="image/avif">
-				<source srcset="images/top-bg.webp" type="image/webp">
-				<img class="top__img" src="images/top-bg.jpg" width="1920" height="1080" alt="">
-			</picture>
-			<img class="top__logo" src="images/logo.svg" alt="">
+		<section class="top" style="background: 
+    url('images/top-bg.jpg') no-repeat center center; 
+    background-size: cover">
+			<div class="top__content">
+				<img class="top__logo" src="images/logo.svg" alt="">
+			</div>
 		</section>
 		<section class="about">
 			<div class="container">
@@ -333,7 +332,8 @@
 						</picture>
 					</div>
 					<div class="men__item">
-						<a class="men__link button" href="#" aria-label="Посетить страницу с процедурами для мужчин">ПРОЦЕДУРЫ ДЛЯ МУЖЧИН
+						<a class="men__link button" href="#" aria-label="Посетить страницу с процедурами для мужчин">ПРОЦЕДУРЫ ДЛЯ
+							МУЖЧИН
 						</a>
 					</div>
 					<div class="men__item">
