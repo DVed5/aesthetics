@@ -1212,6 +1212,7 @@ main {
   height: 100vh;
 }
 .top__logo {
+  display: none;
   position: relative;
   top: -14vw;
   left: 7vw;
@@ -1730,9 +1731,6 @@ main {
   .header__phone {
     display: block;
   }
-  .top__logo {
-    top: -10vw;
-  }
   .footer-content__inner {
     justify-content: center;
     flex-direction: column;
@@ -1792,6 +1790,7 @@ main {
 }
 @media (max-width: 800px) {
   .top__logo {
+    display: block;
     top: -9vw;
   }
   .reviews__slide-text {
