@@ -1,0 +1,68 @@
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-size: 16px;
+	line-height: 26px;
+	color: $default;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.button {
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	text-align: center;
+	color: #fff;
+	border: solid 1px #fff;
+	border-radius: 2px;
+	background-color: transparent;
+	padding: 5px 25px;
+	transition: background .2s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $bg;
+	}
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.logo {
+	display: block;
+	width: 164px;
+}
+
+.title {
+	color: $title;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
