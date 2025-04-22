@@ -242,6 +242,7 @@
 
 .services {
 	margin-bottom: 80px;
+	scroll-margin-top: 70px;
 
 	&__inner {
 		display: grid;
@@ -293,6 +294,7 @@
 }
 
 .reviews {
+	scroll-margin-top: 70px;
 	margin-bottom: 70px;
 	text-align: center;
 
@@ -360,6 +362,7 @@
 }
 
 .men {
+	scroll-margin-top: 70px;
 	margin-bottom: 100px;
 
 	&__inner {
@@ -473,6 +476,7 @@
 }
 
 .footer-form {
+	scroll-margin-top: 70px;
 	margin-top: 150px;
 	background-color: #fff;
 	padding: 40px 30px 30px;
@@ -513,6 +517,7 @@
 		select {
 			flex-basis: 100%;
 			background: #fff;
+			color: $default;
 		}
 
 		textarea {
@@ -594,6 +599,8 @@
 	}
 
 	&__item {
+		scroll-margin-top: 70px;
+
 		p {
 			margin-bottom: 40px;
 		}

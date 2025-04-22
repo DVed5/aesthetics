@@ -90,10 +90,6 @@ select {
   font: inherit;
 }
 
-select {
-  color: inherit;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -971,6 +967,9 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   height: 100%;
   font-size: 16px;
   line-height: 26px;
@@ -1253,6 +1252,7 @@ main {
 
 .services {
   margin-bottom: 80px;
+  scroll-margin-top: 70px;
 }
 .services__inner {
   display: grid;
@@ -1302,6 +1302,7 @@ main {
 }
 
 .reviews {
+  scroll-margin-top: 70px;
   margin-bottom: 70px;
   text-align: center;
 }
@@ -1371,6 +1372,7 @@ main {
 }
 
 .men {
+  scroll-margin-top: 70px;
   margin-bottom: 100px;
 }
 .men__inner {
@@ -1488,6 +1490,7 @@ main {
 }
 
 .footer-form {
+  scroll-margin-top: 70px;
   margin-top: 150px;
   background-color: #fff;
   padding: 40px 30px 30px;
@@ -1538,6 +1541,7 @@ main {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   background: #fff;
+  color: #5a5a5a;
 }
 .footer-form__group textarea {
   -ms-flex-preferred-size: 100%;
@@ -1623,6 +1627,9 @@ main {
   color: #5a5a5a;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+}
+.footer-content__item {
+  scroll-margin-top: 70px;
 }
 .footer-content__item p {
   margin-bottom: 40px;
